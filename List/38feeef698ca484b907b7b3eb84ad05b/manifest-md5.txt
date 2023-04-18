@@ -1,0 +1,3 @@
+11b30523876415044500fbdffba6ad3b    data/resourcemap.xml
+3cd88031e5c868446e610459b549e651    data/resourcemetadata.xml
+0562d69081e4d4ac9d2683fdfd4e0fa2    data/contents/collection_list_38feeef698ca484b907b7b3eb84ad05b.csv

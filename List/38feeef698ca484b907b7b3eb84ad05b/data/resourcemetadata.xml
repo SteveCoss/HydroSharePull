@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CollectionResource rdf:about="http://www.hydroshare.org/resource/38feeef698ca484b907b7b3eb84ad05b">
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2023-04-17T14:41:59.390407+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CollectionResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Collection Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:language>eng</dc:language>
+    <dc:subject>Discharge</dc:subject>
+    <dc:subject>Velocity</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19321</hsterms:description>
+        <hsterms:name>Coss, Steve</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19321</hsterms:hydroshare_user_id>
+        <hsterms:organization>Byrd Polar and Climate Research Instatute;Ohio State University</hsterms:organization>
+        <hsterms:email>Steve.coss.swot@gmail.com</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>A gathering place for community hydrology data to be used in constraining and validating SWOT river discharge parameter estimates . We request users submit CSVs following the template provided (SWOT_SHCQ_template.csv), and that they limit thier contributions to one such file that they update when needed.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>SWOT</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isVersionOf>Coss, S. (2023). Surface Water and Ocean Topography  Hydrology Community Discharge (SWOT SHCQ), HydroShare, http://www.hydroshare.org/resource/96f1928c95834539ba260ab65ea8db8e</dcterms:isVersionOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2023-04-17T14:44:10.999821+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/38feeef698ca484b907b7b3eb84ad05b"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:title>Surface Water and Ocean Topography  Hydrology Community Discharge (SWOT SHCQ)</dc:title>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Coss, S. (2023). Example Data II For Surface Water and Ocean Topography Hydrology Community Discharge (SWOT SHCQ), HydroShare, http://www.hydroshare.org/resource/465672b67a6d467384eba0724ca979ea</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dcterms:bibliographicCitation>Coss, S. (2023). Surface Water and Ocean Topography  Hydrology Community Discharge (SWOT SHCQ), HydroShare, http://www.hydroshare.org/resource/38feeef698ca484b907b7b3eb84ad05b</dcterms:bibliographicCitation>
+    <dc:subject>Depth</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Coss, S. (2023). Example Data For Surface Water and Ocean Topography Hydrology Community Discharge (SWOT SHCQ)V2, HydroShare, http://www.hydroshare.org/resource/cbf1587a7f1f4beb9693a3d1973385da</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+  </hsterms:CollectionResource>
+</rdf:RDF>

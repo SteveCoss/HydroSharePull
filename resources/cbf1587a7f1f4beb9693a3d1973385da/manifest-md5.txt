@@ -1,0 +1,5 @@
+082a5ef648d6d0df01c2bb2fda050a50    data/resourcemap.xml
+bf19536a9c34cef812b4539ae091afce    data/resourcemetadata.xml
+ac40e27b268a3485c7a5796c3efbf5e5    data/contents/SCoss_SWOT_SHCQ1.csv
+ac40e27b268a3485c7a5796c3efbf5e5    data/contents/SCoss_SWOT_SHCQ2.csv
+4a2ba1e8462814b5dae553f752b323f4    data/contents/SWOT_SHCQ_template.csv

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/465672b67a6d467384eba0724ca979ea">
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:title>Example Data II For Surface Water and Ocean Topography Hydrology Community Discharge (SWOT SHCQ)</dc:title>
+    <dc:language>eng</dc:language>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>Example data for SWOT SHCQ. This data includes both a template file as well as some example data for development of retrieval tools in confluence. Please note the the included discharge data are a mix of model and gage outputs and are not meant for scientific use.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:subject>velocity</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2023-03-21T14:51:30.946715+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>depth</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/465672b67a6d467384eba0724ca979ea"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Coss, S. (2023). Surface Water and Ocean Topography  Hydrology Community Discharge (SWOT SHCQ), HydroShare, http://www.hydroshare.org/resource/96f1928c95834539ba260ab65ea8db8e</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Byrd Polar and Climate Research Instatute;Ohio State University</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19321</hsterms:description>
+        <hsterms:email>Steve.coss.swot@gmail.com</hsterms:email>
+        <hsterms:name>Coss, Steve</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19321</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>SWOT</dc:subject>
+    <dcterms:bibliographicCitation>Coss, S. (2023). Example Data II For Surface Water and Ocean Topography Hydrology Community Discharge (SWOT SHCQ), HydroShare, http://www.hydroshare.org/resource/465672b67a6d467384eba0724ca979ea</dcterms:bibliographicCitation>
+    <dc:subject>discharge</dc:subject>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2023-03-21T14:54:49.123930+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+  </hsterms:CompositeResource>
+</rdf:RDF>
