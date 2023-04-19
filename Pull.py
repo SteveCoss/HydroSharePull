@@ -152,7 +152,7 @@ for reach in Ureach:
     data_v.append(np.array(V)[idx])
     data_vu.append(np.array(Vu)[idx])
     
-    
+
     
     
     
@@ -180,13 +180,15 @@ for i in range(len(data_rid)):
     # pull in Q
     Q=data_q[i]
    
-    if Q.empty is False:
-        print(i)
-        Q=Q.to_numpy()
-      
-        T=data_t[i].index.values        
-        T=pd.DatetimeIndex(T)
-        T=T[Mask]
+    if Q.size >0:
+        print(i)       
+        t=data_t[i]
+        T=[]
+        for time in t:
+            
+            T.append(pd.Timestamp.fromordinal(time))             
+       
+        T=pd.DatetimeIndex(T)        
         moy=T.month
         yyyy=T.year
         moy=moy.to_numpy()       
@@ -194,7 +196,7 @@ for i in range(len(data_rid)):
         for j in range((len(T))):
             thisT=np.where(ALLt==np.datetime64(T[j]))
             Qwrite[i,thisT]=Q[j]
-            Twrite[i,thisT]=date.toordinal(T[j])
+            Twrite[i,thisT]=dtd.toordinal(T[j])
             # with df pulled in run some stats
             #basic stats
             Qmean[i]=np.nanmean(Q)
@@ -202,42 +204,47 @@ for i in range(len(data_rid)):
             Qmin[i]=np.nanmin(Q)
             #monthly means
             Tmonn={}    
-            for j in range(12):
-                Tmonn=np.where(moy==j+1)
-                if not np.isnan(Tmonn).all() and Tmonn: 
-                    MONQ[i,j]=np.nanmean(Q[Tmonn])
+        for j in range(12):
+            Tmonn=np.where(moy==j+1)
+            if not np.isnan(Tmonn).all() and Tmonn: 
+                MONQ[i,j]=np.nanmean(Q[Tmonn])
                     
                 #flow duration curves (n=20)
                 
-                p=np.empty(len(Q))  
-                    
-                for j in range(len(Q)):
-                    p[j]=100* ((j+1)/(len(Q)+1))           
-                    
-                    
+                p=np.empty(len(Q))
+                
+        if len(Q)>21:    #do not FDQ on fewer than 21 datum
+            for j in range(len(Q)):
+                p[j]=100* ((j+1)/(len(Q)+1))         
                 thisQ=np.flip(np.sort(Q))
                 FDq=thisQ
                 FDp=p
                 FDQS[i]=np.interp(list(range(1,99,5)),FDp,FDq)
-                    #FDPS=list(range(0,99,5))
-                    # Two year recurrence flow
+                        #FDPS=list(range(0,99,5))
+                        # Two year recurrence flow
                     
-                Yy=np.unique(yyyy); 
-                Ymax=np.empty(len(Yy))  
-                for j in range(len(Yy)):
-                    Ymax[j]=np.nanmax(Q[np.where(yyyy==Yy[j])]);
-                
-                MAQ=np.flip(np.sort(Ymax))
-                m = (len(Yy)+1)/2
+        
+        Yy=np.unique(yyyy) 
+        Ymax=np.empty(len(Yy))  
+        for j in range(len(Yy)):
+            Ymax[j]=np.nanmax(Q[np.where(yyyy==Yy[j])]);
+            
+            MAQ=np.flip(np.sort(Ymax))
+            m = (len(Yy)+1)/2
                     
-                TwoYr[i]=MAQ[int(np.ceil(m))-1]
+            TwoYr[i]=MAQ[int(np.ceil(m))-1]
 
+        
         Mt=list(range(1,13))
         P=list(range(1,99,5))
 
+
+
+
+
 HydroShare_dict = {
-            "data": data,
-            "reachId": reachID,            
+            "data": data_id,
+            "reachId":  data_rid,            
             "Qwrite": Qwrite,
             "Twrite": Twrite,
             "Qmean": Qmean,
@@ -248,5 +255,5 @@ HydroShare_dict = {
             "P": P,
             "FDQS": FDQS,
             "TwoYr": TwoYr,
-            "Agency":['USGS']*len(dataUSGS)
+            "Agency":['HydroWebPull']*len(data_id)
         }
